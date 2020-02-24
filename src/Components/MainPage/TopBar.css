@@ -1,0 +1,7 @@
+.login-button{
+    font-weight: bold !important; 
+    color: #fff;
+    background: linear-gradient(to bottom right, #B05574, #F87E7B) !important;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
