@@ -1,7 +1,21 @@
 import React, { Component } from 'react'
-import { Navbar,Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, FormControl, Button, Form } from 'react-bootstrap'
+import SignPage from '../SignPage/SignPage'
 
 export class TopBar extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             Popup:true
+        }
+    }
+    togglePopup(){
+        this.setState({
+            Popup:!this.state.Popup
+        })
+    }
+    
     render() {
         return (
             <div>
@@ -10,7 +24,7 @@ export class TopBar extends Component {
                         <Form inline>
                             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                             <Button variant="outline-success" className='grow bg-white'>Search</Button>
-                            <Button className= 'login-button'>login</Button>
+                            <Button className= 'login-button' onClick={this.togglePopup.bind(this)} >login</Button>
                         </Form>
                 </Navbar>
             </div>
